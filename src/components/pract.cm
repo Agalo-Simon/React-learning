@@ -1,0 +1,30 @@
+
+
+//======= chats array of object ==============//
+
+const chats = [
+    {message:"Hello chatbot!.", sender:"user"},
+    {message:"How can I help you!.", sender:"robot"},
+    {message:"Tell me the date of today!.", sender:"user"},
+    {message:"Today is 23rd January 2026 !.", sender:"robot"},
+  ]
+
+function Messages(){
+  return(
+    <>
+      
+      //=======second method loop through ===========//
+
+        {chats.map(chat =>{
+          return <ChatMesssage  message={chat.message} sender={chat.sender} key={chat.id}/>
+        })}
+
+      //=======first method ===========//
+
+      <ChatMesssage message="Hello chatbot!." sender="user" />
+      <ChatMesssage message="How can I help you!." sender="robot" />
+      <ChatMesssage message="Tell me the date of today!." sender="user" />
+      <ChatMesssage message="Today is 23rd January 2026!." sender="robot" />
+    </>
+  )
+}
